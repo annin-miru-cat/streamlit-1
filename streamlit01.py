@@ -19,7 +19,7 @@ DeepGame is not just a storytelling tool but an interactive partner in the user'
 while True:
             S=st.text_input("response")
             response = client.models.generate_content( model='gemini-3.1-flash-lite-preview', config=configs, contents=S)
-            st.write(response.txt)
+            st.write(response.text)
 is_dark_mode = st.checkbox("深色模式")
 st.write(response.text)
 
