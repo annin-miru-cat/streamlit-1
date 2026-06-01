@@ -19,3 +19,21 @@ birth_year = st.number_input(
 )
 age = 2026 - birth_year
 st.write(f"你的年紀 {age}")
+is_dark_mode = st.checkbox(" 深色模式")
+
+if is_dark_mode:
+    bg_color = "#0E1117"
+    text_color = "#FFFFFF"
+    st.write(" 晚安！")
+else:
+    bg_color = "#FFFFFF"
+    text_color = "#000000"
+    st.write(" 早安！")
+
+st.markdown(f"""
+    <style>.stApp {{
+        background-color: {bg_color};
+        color: {text_color};
+    }}
+    </style>
+    """, unsafe_allow_html=True)
