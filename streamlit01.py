@@ -21,7 +21,6 @@ while True:
             response = client.models.generate_content( model='gemini-3.1-flash-lite-preview', config=configs, contents=S)
             st.write(response.text)
 is_dark_mode = st.checkbox("深色模式")
-st.write(response.text)
 
 if is_dark_mode:
     bg_color = "#0E1117"
