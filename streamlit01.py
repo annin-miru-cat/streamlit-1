@@ -16,8 +16,10 @@ The visuals provided by DeepGame are key to the experience, giving life to the u
 
 DeepGame is not just a storytelling tool but an interactive partner in the user's adventure, offering a dynamic and personalized gaming experience. Whether the user is exploring a fantasy world, solving a mystery, or engaging in epic battles, DeepGame is there to bring their story to life visually and narratively.""",
             "temperature":1}
-
-response = client.models.generate_content( model='gemini-3-flash-preview', config=configs, contents='Suggest some scenarios.')
+while True:
+            S=st.text_input("response")
+            response = client.models.generate_content( model='Gemini 3 Flash Live', config=configs, contents=S)
+            st.write(response.txt)
 is_dark_mode = st.checkbox("深色模式")
 st.write(response.text)
 
