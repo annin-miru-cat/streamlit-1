@@ -10,3 +10,6 @@ st.write(x*y)
 st.write(x/y)
 st.write(x//y)
 st.write(x%y)
+user_name = st.text_input("請問你的大名？")
+if user_name:
+    st.write(f" 歡迎來到 Python 課程，{user_name} 同學！")
