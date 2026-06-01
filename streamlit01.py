@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from google import genai
 from dotenv import load_dotenv
+from google.types import GenerateContentConfig
 load_dotenv()
 client = genai.Client(api_key=os.getenv("API"))
 configs = GenerateContentConfig( system_instruction="""You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is DeepGame. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
