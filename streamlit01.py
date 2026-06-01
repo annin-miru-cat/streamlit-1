@@ -1,7 +1,7 @@
 import streamlit as st
-import os from google
-import genai from dotenv
-import load_dotenv
+import os
+from google import genai
+from dotenv import load_dotenv
 load_dotenv()
 client = genai.Client(api_key=os.getenv("API"))
 response = client.models.generate_content( model='gemini-2.5-flash', contents='你好！')
