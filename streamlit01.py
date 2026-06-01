@@ -19,6 +19,7 @@ DeepGame is not just a storytelling tool but an interactive partner in the user'
 while True:
             S=st.text_input("response")
             if st.button("click"):
-                        response = client.models.generate_content( model='gemini-3.1-flash-lite-preview', config=configs, contents=S)
-                        st.write(response.text)
+                        if S:
+                                    response = client.models.generate_content( model='gemini-3.1-flash-lite-preview', config=configs, contents=S)
+                                    st.write(response.text)
 
