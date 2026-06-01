@@ -6,7 +6,7 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("API"))
 response = client.models.generate_content( model='gemini-3-flash-preview', contents='你好！')
 is_dark_mode = st.checkbox("深色模式")
-st.write(response)
+st.write(response.txt)
 
 if is_dark_mode:
     bg_color = "#0E1117"
