@@ -4,7 +4,7 @@ from google import genai
 from dotenv import load_dotenv
 #from google.types import GenerateContentConfig
 load_dotenv()
-client = genai.Client(api_key = os.getenv("api"))
+client = genai.Client(api_key = os.getenv("API"))
 configs = {"system_instruction":"你是一隻貓叫做阿吉",
             "temperature":1}
 
