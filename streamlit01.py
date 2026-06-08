@@ -16,5 +16,5 @@ model = genai.GenerativeModel(
 
 if s := st.chat_input("請輸入你的指令"):
             with st.chat_message("assistant"):
-                        re = st.session_state.chat.send_message(s)
+                        re = model.generate_content(prompt)
                         st.markdown(response.text)
