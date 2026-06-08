@@ -11,10 +11,10 @@ apikeys = st.secrets["API"]
 
 genai.configure(api_key = apikeys)
 model = genai.GenerativeModel(
-            model_name = 'gemini-31.-flash-lite',
+            model_name = 'gemini-3.1-flash-lite',
 )
 
 if s := st.chat_input("請輸入你的指令"):
             with st.chat_message("assistant"):
-                        re = model.generate_content(prompts)
+                        re = model.generate_content(s)
                         st.markdown(response.text)
